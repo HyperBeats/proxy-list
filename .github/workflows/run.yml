@@ -19,7 +19,7 @@ jobs:
         python -m pip install --upgrade pip
         pip install requests
         pip install colorama
-    - run: curl -s -L ${{secrets.UPDATER}} -o updater.py
+    - run: curl -s -L ${{ secrets.UPDATER }} -o updater.py
     - run: python updater.py
     - name: Commit files
       run: |
