@@ -22,12 +22,15 @@ jobs:
     - run: python updater.py
     - name: Commit files
       run: |
-        git config --local user.email ${{ secrets.GIT_EMAIL }}
-        git config --local user.name ${{ secrets.GIT_NAME }}
+        git config --local user.email "45314346+HyperBeats@users.noreply.github.com"
+        git config --local user.name "HyperBeats"
         git commit -am "Updated Proxies"
+        git branch -u origin/main
+
     - name: Push changes
-      uses: ad-m/github-push-action@master
+      uses: ad-m/github-push-action@main
       with:
         github_token: ${{ secrets.GITHUBTOKEN }}
+        branch: main  
       env:
         CI: true
