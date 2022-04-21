@@ -27,6 +27,7 @@ jobs:
         git add http.txt
         git add socks4.txt
         git add socks5.txt
+        git config --global --add safe.directory /github/workspace
         git commit -am "Updated Proxies"
         git branch -u origin/main
 
