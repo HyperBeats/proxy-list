@@ -26,7 +26,7 @@ jobs:
         git config --local user.email "45314346+HyperBeats@users.noreply.github.com"
         git config --local user.name "HyperBeats"
         git add -A http.txt socks4.txt socks5.txt
-        git commit -am "Updated Proxies"
+        git commit -m "Updated Proxies" -a
         git branch -u origin/main
         
     - name: Push changes
