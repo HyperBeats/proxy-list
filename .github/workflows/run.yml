@@ -33,7 +33,7 @@ jobs:
     - name: Push changes
       uses: ad-m/github-push-action@v0.1.0
       with:
-        github_token: ${{ secrets.GITHUBTOKEN }}
+        github_token: ${{ secrets.GITHUB_TOKEN }}
         branch: main  
       env:
         CI: true
