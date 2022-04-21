@@ -25,12 +25,13 @@ jobs:
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
+        git config --global --add safe.directory "$GITHUB_WORKSPACE"
         git add -A http.txt socks4.txt socks5.txt
         git commit -m "Updated Proxies" -a
         git branch -u origin/main
         
     - name: Push changes
-      uses: ad-m/github-push-action@v0.1.0
+      uses: ad-m/github-push-action@v0.6.0
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         branch: main  
